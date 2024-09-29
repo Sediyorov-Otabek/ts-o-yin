@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/output.css">
+    <title>Document</title>
+</head>
+
+<body class="gradient">
+    <div class="greeting fixed flex-col gap-10 inset-0 bg-sky-400 z-10 flex items-center justify-center">
+        <div class="max-w-96">
+            <h1 class="text-4xl items-center flex justify-center text-center mb-10 text-lime-100">Xush kelibsiz DON DON ZIKIGA</h1>
+            <form class="grid gap-4 greeting__form">
+                <div class="form__item flex flex-col gap-3">
+                    <label for="p1" class="text-red-600">Birinchi o'yinchi</label>
+                    <input type="text" name="p1" id="p1"
+                        class="bg-transparent border p-1 ps-3 outline-none text-xl text-slate-200 focus:bg-slate-700 duration-300 rounded-md"
+                        required>
+                </div>
+                <div class="form__item flex flex-col gap-3">
+                   <label for="p1" class="text-red-600">Ikkinchi o'yinchi</label>
+                    <input type="text" name="p2" id="p2"
+                        class="bg-transparent border p-1 ps-3 outline-none text-xl text-slate-200 focus:bg-slate-700 duration-300 rounded-md"
+                        required>
+                </div>
+                <div class="form__item flex items-center justify-between gap-3">
+                    <label for="limit" class="text-sky-900">Miqdor:</label>
+                    <input type="number" name="limit" id="limit"
+                        class="bg-transparent w-2/5 border p-1 ps-3 outline-none text-xl text-slate-200 focus:bg-slate-700 duration-300 rounded-md"
+                        required>
+                </div>
+                <button
+                    class="bg-blue-600 py-2 text-xl rounded-full text-white hover:brightness-110 duration-200 active:brightness-95">Boshlash</button>
+            </form>
+        </div>
+    </div>
+    <main class="min-h-screen w-full flex items-center justify-center z-0">
+        <div
+            class="players__field max-w-3xl min-w-96 md:w-2/4 min-h-[40rem] mx-auto flex flex-col bg-[#00000022] backdrop-blur-sm border-2 border-slate-600 rounded-3xl shadow-md">
+            <h2 class="text-center text-sky-200 text-5xl py-8 border-b border-slate-700">Tiki Taka</h2>
+            <div class="wrapper h-full flex flex-grow text-slate-100 overflow-hidden">
+                <div class="player pt-10 self-stretch w-2/4 border-r border-slate-700 text-center">
+                    <h2 class="player__name text-3xl text-slate-100" id="player-1">Player 1</h2>
+                    <div class="player__info py-10 h-4/5 px-[10%] flex flex-col justify-between gap-2">
+                        <div class="player__info--texts">
+                            <h3 class="text-xl text-sky-400">Scores: <span id="first-player-score"
+                                    class="score">0</span></h3>
+                            <h3 class="text-sky-500 text-xl">Random num: <span id="first-player-randomN"
+                                    class="random-num text-2xl">0</span></h3>
+                        </div>
+                        <h4 class="text-3xl animate-bounce" id="player-1-turn">Your turn</h4>
+                        <button id="first-player-btn"
+                            class="py-4 px-8 mt-6 mx-auto bg-sky-400 shadow-md shadow-sky-500 hover:shadow-transparent hover:brightness-105 rounded-full font-semibold text-green-200 duration-300">
+                            <span class="drop-shadow-md">GENERATE</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="player pt-10 self-stretch w-2/4 border-s border-slate-700 text-center">
+                    <h2 class="player__name text-3xl text-slate-100" id="player-2">Player 2</h2>
+                    <div class="player__info py-10 h-4/5 px-[10%] flex flex-col justify-between gap-2">
+                        <div class="player__info--texts">
+                            <h3 class="text-xl text-sky-400">Scores: <span id="second-player-score"
+                                    class="score">0</span></h3>
+                            <h3 class="text-sky-500 text-xl">Random num: <span id="second-player-randomN"
+                                    class="random-num text-2xl">0</span></h3>
+                        </div>
+                        <h4 class="text-3xl animate-bounce" id="player-2-turn">Your turn</h4>
+                        <button id="second-player-btn"
+                            class="py-4 px-8 mt-6 mx-auto bg-sky-400 shadow-md shadow-sky-500 hover:shadow-transparent hover:brightness-105 rounded-full font-semibold text-green-200 duration-300">
+                            <span class="drop-shadow-md">GENERATE</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <div class="result fixed hidden flex-col gap-6 inset-0 bg-sky-800 z-10 items-center justify-center">
+        <h2 class="text-5xl text-slate-50">Congratulations</h2>
+        <p class="text-xl text-green-300"><span class="winner">Someone</span> won the game!</p>
+        <button
+            class="playAgain bg-green-400 py-3 px-6 rounded-full text-sm hover:shadow-md hover:brightness-110 active:brightness-90 duration-300">Play
+            Again!
+        </button>
+    </div>
+    <audio src="./src/music/winning-music.wav" class="music"></audio>
+    <script src="./src/js/app.js"></script>
+</body>
+
+</html>

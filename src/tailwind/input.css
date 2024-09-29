@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient {
+  background: rgb(2, 0, 36);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(2, 1, 41, 1) 0%,
+    rgba(9, 9, 121, 1) 48%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(2, 1, 41, 1) 0%,
+    rgba(9, 9, 121, 1) 48%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(2, 1, 41, 1) 0%,
+    rgba(9, 9, 121, 1) 48%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#00d4ff",GradientType=1);
+}
+
+.fade-out {
+  animation: fadeOut 1s 1 linear forwards;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s 1 linear forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.result {
+  display: flex;
+}
+.hidden {
+  display: none;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+button:disabled {
+  opacity: 0.7;
+}
